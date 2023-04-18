@@ -1,0 +1,61 @@
+
+.navbar{
+    background-color: #161B2E;
+}
+
+.menu-text{
+    font-family: inter;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-brand {
+    color: white
+}
+
+.navbar-light .navbar-brand:hover {
+    color: white
+}
+
+.fs-7{
+    font-size: 0.85rem;
+}
+
+#created-by{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width:992px){
+
+  
+    #vertical-menu, #vertical-menu .collapse, #vertical-menu .collapse .navbar-nav, li{
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        color: white;
+    }
+
+    #created-by{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar{
+        width: 20%;
+        height: 100vh;
+        align-items: start;
+    }
+
+}
