@@ -1,12 +1,7 @@
 
+/*BOOTSTRAP CHANGED CLASSES*/
 .navbar{
     background-color: #161B2E;
-}
-
-.menu-text{
-    font-family: inter;
-    color: white;
-    font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link.active{
@@ -25,20 +20,34 @@
     color: white
 }
 
+
+/*NEW CREATED CLASSES*/
+
+.menu-text{
+    font-family: inter;
+    color: white;
+    font-weight: 500;
+}
+
+.inter{
+    font-family: inter;
+}
+
 .fs-7{
     font-size: 0.85rem;
 }
 
+/*NEW CREATED IDs*/
 #created-by{
     display: none;
 }
 
 
 
+/*ADEQUATIONS FOR MEDIUM SCREEN SIZE DEVICES*/
 
 @media screen and (min-width:992px){
 
-  
     #vertical-menu, #vertical-menu .collapse, #vertical-menu .collapse .navbar-nav, li{
         flex-direction: column;
         margin-right: auto;
@@ -53,7 +62,7 @@
     }
 
     .navbar{
-        width: 20%;
+        width: 21%;
         height: 100vh;
         align-items: start;
     }

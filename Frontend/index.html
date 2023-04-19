@@ -17,12 +17,15 @@
     <body style="background-color: #111525;">
 
     
-        <div class="container-fluid mx-0 my-0 px-0 py-0 d-flex">
-                <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid mx-0 my-0 px-0 py-0 d-flex flex-column flex-md-row">
+
+
+                <!-- VERTICAL MENU -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
 
                     <div class="container-fluid" id="vertical-menu">
 
-                        <a class="navbar-brand menu-text fw-normal" href="#">IoT Monitoring</a>
+                        <a class="navbar-brand menu-text fw-normal mt-2 text-center" href="#">IoT Monitoring</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -35,41 +38,45 @@
                                 <span class="mt-2 fs-7">ENRIQUE SOUSA</span>
                             </div>
 
-                            <div class="mt-4 menu-text fs-7">SELECIONE UM PERIODO ABAIXO</div>
+                            <div class="mt-4 menu-text fs-7">SELECIONE UM PERIODO</div>
 
-                            <div class="input-group mt-2 px-2">
+                            <div class="input-group mt-2 px-1">
                                 <div class="btn btn-outline-light w-25 fs-7 menu-text">DE</div>
-                                <input type="date" class="form-control" aria-label="Text input with dropdown button">
+                                <input type="date" class="form-control">
                             </div>
 
-                            <div class="input-group mt-2 px-2">
-                                <div class="btn btn-outline-light w-25 fs-7 menu-text">ATÉ</div>
-                                <input type="date" class="form-control" aria-label="Text input with dropdown button">
+                            <div class="input-group mt-2 px-1">
+                                <div class="btn btn-outline-light w-25 fs-7 menu-text text-center">ATÉ</div>
+                                <input type="date" class="form-control">
                             </div>
 
                             <div class="mt-4 menu-text fs-7">MEDIÇÕES DISPONIVEIS</div>
 
-                            <div class="input-group mt-2 px-2">
-                                <button class="btn btn-outline-light dropdown-toggle fs-7 menu-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">MEDIÇÕES</button>
+                            <div class="input-group mt-2 px-1">
+                                <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split w-25 " data-bs-toggle="dropdown" aria-expanded="false">
+                                  <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Action</a></li>
-                                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  <li><hr class="dropdown-divider"></li>
-                                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                  <li><a class="dropdown-item" href="#">Option1</a></li>
+                                  <li><a class="dropdown-item" href="#">Option2</a></li>
+                                  <li><a class="dropdown-item" href="#">Option3</a></li>
+                                  <li><a class="dropdown-item" href="#">Option4</a></li>
                                 </ul>
-                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
                             </div>
 
                         </div>
                     </div>
                 </nav>
+                <!-- END OF VERTICAL MENU-->
 
 
-                <div style="text-align: center;">
-                    <h1>teste121</h1>
+                <!-- PAGE CONTENT -->
+                <div class="container-fluid text-center inter">
+                    <h2 class="text-light fs-3 mt-4">BEM VINDO AO SISTEMA DE MONITORAMENTO DE TENSÃO</h2>
 
                 </div>
+                <!-- END OF PAGE CONTENT-->
 
         </div>
             
