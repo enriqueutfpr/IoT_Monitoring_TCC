@@ -1,9 +1,11 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import cors from 'cors'
 import {getAllDates, insertMeasure , getMeasure, insertUser} from './database.js'
 
+dotenv.config()
 const app = express()
-const PORT = 8000
+const PORT = process.env.PORT
 
 app.use(express.json())
 app.use(cors())
