@@ -1,0 +1,171 @@
+
+/*BOOTSTRAP CHANGED CLASSES*/
+
+
+.navbar{
+    background-color: #161B2E; 
+}
+
+/*
+.navbar-light .navbar-nav .nav-link.active{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-brand {
+    color: white
+}
+
+.navbar-light .navbar-brand:hover {
+    color: white
+}
+*/
+
+/*NEW CREATED CLASSES*/
+
+.menu-text{
+    font-family: inter;
+    color: white;
+    font-weight: 400;
+}
+
+.card-text{
+    font-family: inter;
+    color: white;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.inter{
+    font-family: inter;
+}
+
+.fs-7{
+    font-size: 0.9rem;
+}
+
+.network-info-card{
+    border-radius: 5px 40px 5px 40px;
+    background-image: linear-gradient(270deg,rgba(75, 139, 219, 0.87),rgba(35, 228, 228, 0.82));
+    height: 13rem;
+    width: 100%;
+}
+
+.measure-info-card{
+    border-radius: 40px 5px 40px 5px;
+    background-image: linear-gradient(270deg,rgba(162, 117, 248, 0.82),rgba(211, 114, 242, 0.9));
+    height: 13rem;
+    width: 100%;
+}
+
+.blue-signal-card{
+    border-radius: 10px 0px 0px 10px;
+    background-image: linear-gradient(270deg,rgba(75, 139, 219, 0.87),rgba(35, 228, 228, 0.82));
+}
+
+.blue-signal-card{
+    border-radius: 10px 0px 0px 10px;
+    background-image: linear-gradient(270deg,rgba(75, 139, 219, 0.87),rgba(35, 228, 228, 0.82));
+}
+
+.purple-signal-card{
+    border-radius: 10px 0px 0px 10px;
+    background-image: linear-gradient(270deg,rgba(162, 117, 248, 0.82),rgba(211, 114, 242, 0.9));
+}
+
+.blue-signal-card-img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.signal-input{
+    background-color: #161B2E;
+    border: 0px;
+    border-radius: 0px 7px 7px 0px;
+    width: 80%;
+}
+
+/*NEW CREATED IDs*/
+
+#created-by{
+    display: none;
+}
+
+canvas{
+    background-color: #161B2E;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+body{
+    background-color: #0f1321;
+}
+
+/*ADEQUATIONS FOR MEDIUM SCREEN SIZE DEVICES*/
+
+@media screen and (min-width:992px){
+
+    
+    #vertical-menu, #vertical-menu .collapse, #vertical-menu .collapse .navbar-nav, li{
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        color: white;
+    }
+
+    #created-by{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 11rem;
+    }
+    
+    .navbar{
+        width: auto;
+        align-items: start;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    .fs-7{
+        font-size: 0.75rem;
+    }
+
+    canvas{
+        width: 90%;
+    }
+
+}
+
+
+/*ADEQUATIONS FOR SMALL SCREEN SIZE DEVICES*/
+
+@media screen and (max-width:991px){
+
+    .network-info-card{
+        width: 17em;
+        height: 12em;
+        background-color: red;
+    }
+    
+    .measure-info-card{
+        width: 17em;
+        height: 12em;
+    }
+
+    .input-group{
+        width: 75%;
+    }
+
+    canvas{
+        width: 100% ;
+        
+    }
+
+
+
+}

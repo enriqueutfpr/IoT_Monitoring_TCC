@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,38 +6,196 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css" integrity="sha512-3kSeajrEqMrItwRkYz09bOsHsl4/wpoT6mgw5Aw+eSLweQtX7kZp2P/Dm7hnUg/TrbTGesAgCPwvZpllhuROTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <div class="container-fluid px-0 d-flex flex-column flex-lg-row">
 
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <!-- VERTICAL MENU -->
+            <nav class="navbar navbar-dark">
+                <div class="container-fluid d-flex justify-content-start">
+
+                  <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                        <div class="d-flex align-content-center flex-column justify-content-center">
+                            
+                            <div class="mt-4 menu-text text-center align-content-center mx-auto" id="created-by">
+                                <span class="fs-7">AUTOR</span>
+                                <img src="./images/perfil.png" class="img-thumbnail mt-2 bg-transparent border-0 w-75 h-75 mx-auto">
+                                <span class="mt-2 fs-7">ENRIQUE SOUSA</span>
+                            </div>
+
+                            <!--
+
+                            <div class="mt-4 menu-text fs-7 text-center">SELECIONE UM PERIODO</div>
+
+                            <div class="input-group mt-2 px-1 mx-auto">
+                                <div class="btn btn-outline-light w-25 fs-7 menu-text">DE</div>
+                                <input type="date" class="form-control text-center">
+                            </div>
+                            
+                            <div class="input-group mt-3 px-1 mx-auto">
+                                <div class="btn btn-outline-light w-25 fs-7 menu-text text-center">ATÉ</div>
+                                <input type="date" class="form-control text-center">
+                            </div>
+                            -->
+
+                            <button class=" mx-auto btn btn-outline-light fs-7 menu-text mt-5" onclick="getDates()">PESQUISAR MEDIÇÕES</button>
+
+                            <div class="mt-4 menu-text fs-7 text-center" >MEDIÇÕES DISPONIVEIS</div>
+
+                            <div class="input-group mt-2 px-1 mb-3 mx-auto">
+                                <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split w-25 " data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu text-dark" id="availableMeasures">
+                                </ul>
+                                <input type="text" class="form-control text-center text-3" aria-label="Text input with segmented dropdown button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </nav>
+
+            <!-- END OF VERTICAL MENU-->
+
+
+            <!-- PAGE CONTENT -->
+            <div class="container-fluid text-center inter">
+
+                <h2 class="text-light fs-3 mt-5">BEM VINDO AO SISTEMA DE MONITORAMENTO DE TENSÃO</h2>
+
+                <!-- INFO CARDS ABOUT USER IP AND LOCATION AND LOCATION OF THE MEASUREMENT -->
+                <div class="row mt-4 align">
+                    
+                    <div class="col-md-6 col-sm-12">
+                        <div class="row mt-2">
+
+                            <div class="mt-4 text-light font-weight-normal fs-6x">DADOS DO VISITANTE</div>
+
+                            <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-4 d-flex justify-content-center">
+                                <div class="network-info-card mt-3 p-3 d-flex flex-column justify-content-around">
+                                    <span class="card-text fw-regular">Endereço de IP do Visitante</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-4 d-flex justify-content-center">
+                                <div class="network-info-card mt-3 p-3 d-flex flex-column justify-content-around">
+                                    <span class="card-text fw-regular">Local de Acesso</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="row mt-2">
+
+                            <div class="mt-4 text-light font-weight-normal fs-6">DADOS DA MEDIÇÃO</div>
+
+                            <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-3 d-flex justify-content-center">
+                                <div class="measure-info-card mt-3 p-3 d-flex flex-column justify-content-around">
+                                    <span class="card-text fw-regular">Local da Medicao</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-3 d-flex justify-content-center">
+                                <div class="measure-info-card mt-3 p-3 d-flex flex-column justify-content-around">
+                                    <span class="card-text fw-regular">Data e Horário da Medição (CET)</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END OF INFO CARDS -->
+
+
+                <!-- MINI INFO CARDS ABOUT SIGNAL PARAMETERS-->
+                <div class="row mt-5">
+
+                    <div class="mt-4 text-light font-weight-normal fs-6 mb-4">VALORES MÉDIOS DOS PARÂMETROS DO SINAL</div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <span class="card-text fw-regular">Valor Eficaz</span>
+                        <div class="d-flex flex-row p-3 m-0 justify-content-center">
+                            <div class="blue-signal-card p-2">
+                                <img src="./images/rmsValue.png" alt="" class="blue-signal-card-img">
+                            </div>
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <span class="card-text fw-regular">Valor de Pico</span>
+                        <div class="d-flex flex-row p-3 justify-content-center">
+                            <div class="blue-signal-card p-2">
+                                <img src="./images/sine.png" alt="" class="blue-signal-card-img">
+                            </div>
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <span class="card-text fw-regular">Frequência</span>
+                        <div class="d-flex flex-row p-3 justify-content-center">
+                            <div class="purple-signal-card p-2">
+                                <img src="./images/freq.png" alt="" class="blue-signal-card-img">
+                            </div>
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <span class="card-text fw-regular">Período</span>
+                        <div class="d-flex flex-row p-3 justify-content-center">
+                            <div class="purple-signal-card p-2">
+                                <img src="./images/period.png" alt="" class="blue-signal-card-img">
+                            </div>
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END OF MINI INFO CARDS -->
+
+                <!-- CHARTS SECTION -->
+                <div class="row mb-4">
+                    <div class="mt-5 text-light font-weight-normal fs-6">GRAFICOS DO SINAL RECEBIDO E SINAL RECONSTRUIDO</div>
+                    
+                    <span class="card-text fw-regular mx-auto mt-4 mb-1">Sinal Recebido</span>
+                    <div class="col-lg-12 col-md-12 d-flex justify-content-center">
+                        <canvas class="mt-1 mx-md-5"></canvas>
+                    </div>
+
+                    <span class="card-text fw-regular mx-auto mt-4 mb-1">Sinal Reconstruído</span>
+                    <div class="col-lg-12 col-md-12 d-flex justify-content-center">
+                        <canvas class="mt-1 mx-md-5"></canvas>
+                    </div>
+                </div>
+                <!-- END OF CHARTS SECTION-->
+
+            </div>
+            <!-- END OF PAGE CONTENT-->
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="script.js" async defer></script>
+        
     </body>
 </html>
