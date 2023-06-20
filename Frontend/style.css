@@ -50,14 +50,14 @@
 .network-info-card{
     border-radius: 5px 40px 5px 40px;
     background-image: linear-gradient(270deg,rgba(75, 139, 219, 0.87),rgba(35, 228, 228, 0.82));
-    height: 10rem;
+    height: 13rem;
     width: 100%;
 }
 
 .measure-info-card{
     border-radius: 40px 5px 40px 5px;
     background-image: linear-gradient(270deg,rgba(162, 117, 248, 0.82),rgba(211, 114, 242, 0.9));
-    height: 10rem;
+    height: 13rem;
     width: 100%;
 }
 

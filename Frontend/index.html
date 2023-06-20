@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -30,11 +26,13 @@
 
                         <div class="d-flex align-content-center flex-column justify-content-center">
                             
-                            <div class="mt-4 menu-text text-center align-content-center" id="created-by">
+                            <div class="mt-4 menu-text text-center align-content-center mx-auto" id="created-by">
                                 <span class="fs-7">AUTOR</span>
                                 <img src="./images/perfil.png" class="img-thumbnail mt-2 bg-transparent border-0 w-75 h-75 mx-auto">
                                 <span class="mt-2 fs-7">ENRIQUE SOUSA</span>
                             </div>
+
+                            <!--
 
                             <div class="mt-4 menu-text fs-7 text-center">SELECIONE UM PERIODO</div>
 
@@ -46,9 +44,10 @@
                             <div class="input-group mt-3 px-1 mx-auto">
                                 <div class="btn btn-outline-light w-25 fs-7 menu-text text-center">ATÉ</div>
                                 <input type="date" class="form-control text-center">
-                            </div>            
+                            </div>
+                            -->
 
-                            <button class=" mx-auto btn btn-outline-light fs-7 menu-text mt-4 w-75"> PESQUISAR </button>
+                            <button class=" mx-auto btn btn-outline-light fs-7 menu-text mt-5" onclick="getDates()">PESQUISAR MEDIÇÕES</button>
 
                             <div class="mt-4 menu-text fs-7 text-center" >MEDIÇÕES DISPONIVEIS</div>
 
@@ -56,13 +55,9 @@
                                 <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split w-25 " data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Option1</a></li>
-                                <li><a class="dropdown-item" href="#">Option2</a></li>
-                                <li><a class="dropdown-item" href="#">Option3</a></li>
-                                <li><a class="dropdown-item" href="#">Option4</a></li>
+                                <ul class="dropdown-menu text-dark" id="availableMeasures">
                                 </ul>
-                                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+                                <input type="text" class="form-control text-center text-3" aria-label="Text input with segmented dropdown button">
                             </div>
                         </div>
                     </div>
@@ -88,14 +83,14 @@
                             <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-4 d-flex justify-content-center">
                                 <div class="network-info-card mt-3 p-3 d-flex flex-column justify-content-around">
                                     <span class="card-text fw-regular">Endereço de IP do Visitante</span>
-                                    <p class="fw-bold fs-5 inter text-light">45.81.121.45</p>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-4 d-flex justify-content-center">
                                 <div class="network-info-card mt-3 p-3 d-flex flex-column justify-content-around">
                                     <span class="card-text fw-regular">Local de Acesso</span>
-                                    <p class="fw-bold fs-6 inter text-light">BELO HORIZONTE, BRAZIL</p>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
                                 </div>
                             </div>
 
@@ -110,15 +105,15 @@
 
                             <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-3 d-flex justify-content-center">
                                 <div class="measure-info-card mt-3 p-3 d-flex flex-column justify-content-around">
-                                    <span class="card-text fw-regular">Local de Acesso</span>
-                                    <p class="fw-bold fs-6 inter text-light">LODZ, POLAND</p>
+                                    <span class="card-text fw-regular">Local da Medicao</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-sm-6 mt-md-3 mt-sm-3 d-flex justify-content-center">
                                 <div class="measure-info-card mt-3 p-3 d-flex flex-column justify-content-around">
-                                    <span class="card-text fw-regular">Horário da Medição</span>
-                                    <p class="fw-bold fs-5 inter text-light">03:42</p>
+                                    <span class="card-text fw-regular">Data e Horário da Medição (CET)</span>
+                                    <p class="fw-bold fs-5 inter text-light"></p>
                                 </div>
                             </div>
 
@@ -141,7 +136,7 @@
                             <div class="blue-signal-card p-2">
                                 <img src="./images/rmsValue.png" alt="" class="blue-signal-card-img">
                             </div>
-                            <input class="signal-input text-light text-center fw-500" type="text" value="243,321V">
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
                         </div>
                     </div>
 
@@ -151,7 +146,7 @@
                             <div class="blue-signal-card p-2">
                                 <img src="./images/sine.png" alt="" class="blue-signal-card-img">
                             </div>
-                            <input class="signal-input text-light text-center fw-500" type="text" value="311,421V">
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
                         </div>
                     </div>
 
@@ -161,7 +156,7 @@
                             <div class="purple-signal-card p-2">
                                 <img src="./images/freq.png" alt="" class="blue-signal-card-img">
                             </div>
-                            <input class="signal-input text-light text-center fw-500" type="text" value="60Hz">
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
                         </div>
                     </div>
 
@@ -171,7 +166,7 @@
                             <div class="purple-signal-card p-2">
                                 <img src="./images/period.png" alt="" class="blue-signal-card-img">
                             </div>
-                            <input class="signal-input text-light text-center fw-500" type="text" value="16,66ms">
+                            <input class="signal-input text-light text-center fw-500" type="text" value="--">
                         </div>
                     </div>
 
@@ -197,9 +192,6 @@
             </div>
             <!-- END OF PAGE CONTENT-->
     </div>
-
-        
-            
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
