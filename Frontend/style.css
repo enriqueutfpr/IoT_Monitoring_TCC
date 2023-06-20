@@ -1,24 +1,12 @@
 
 /*BOOTSTRAP CHANGED CLASSES*/
 
+
 .navbar{
     background-color: #161B2E; 
 }
 
 /*
-.navbar:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-45deg, #4B8BDB 10%, #A275F8 100% );
-    filter: blur(10px);
-    border-radius: inherit;
-}*/
-
 .navbar-light .navbar-nav .nav-link.active{
     color: white;
 }
@@ -34,7 +22,7 @@
 .navbar-light .navbar-brand:hover {
     color: white
 }
-
+*/
 
 /*NEW CREATED CLASSES*/
 
@@ -106,12 +94,22 @@
     display: none;
 }
 
+canvas{
+    background-color: #161B2E;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 90%;
+}
 
+body{
+    background-color: #0f1321;
+}
 
 /*ADEQUATIONS FOR MEDIUM SCREEN SIZE DEVICES*/
 
 @media screen and (min-width:992px){
 
+    
     #vertical-menu, #vertical-menu .collapse, #vertical-menu .collapse .navbar-nav, li{
         flex-direction: column;
         margin-right: auto;
@@ -123,11 +121,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 11rem;
     }
-
+    
     .navbar{
-        width: 22%;
-        height: 100vh;
+        width: auto;
         align-items: start;
         margin-right: 10px;
         margin-bottom: 0px;
@@ -137,12 +135,16 @@
         font-size: 0.75rem;
     }
 
+    canvas{
+        width: 90%;
+    }
+
 }
 
 
 /*ADEQUATIONS FOR SMALL SCREEN SIZE DEVICES*/
 
-@media screen and (max-width:767px){
+@media screen and (max-width:991px){
 
     .network-info-card{
         width: 17em;
@@ -154,5 +156,16 @@
         width: 17em;
         height: 12em;
     }
+
+    .input-group{
+        width: 75%;
+    }
+
+    canvas{
+        width: 100% ;
+        
+    }
+
+
 
 }
